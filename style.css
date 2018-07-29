@@ -1,0 +1,145 @@
+
+html, body{
+    margin-right:0px;
+    color: #F2F1F5;
+    font-family: 'Roboto', sans-serif;
+}
+
+a{
+    text-decoration: none;
+    color: #F2F1F5;
+}
+
+.presentation, .project, .about, .academic, .contact{
+    height: 100vh;
+    width: 100%;
+    margin: -8px 0px -16px -8px;
+}
+
+.presentation{
+    background-color: #12212E;
+}
+
+.project{
+    background-color: #142736;
+}
+
+.about{
+    background-color: #203647;
+}
+
+.academic{
+    background-color: #344C5F;
+}
+
+.contact{
+    background-color: #4B687D;
+}
+
+/* ---------------------- NAV BAR ------------------*/
+
+/* Source: https://codepen.io/EvyatarDa/pen/waKXMd/ */
+
+.nav
+{
+    margin: 0 auto;
+    text-align: center;
+    padding-left: 55%;
+    padding-top: 1em;
+}
+
+.nav a
+{
+    text-decoration: none;
+    margin: 0px 10px;
+    padding: 10px 10px;
+    position: relative;
+    cursor: pointer;
+}
+
+.nav a:before, .nav a:after
+{
+    position: absolute;
+    opacity: 0;
+    padding-top: 0.65em;
+    top: 0px;
+    transition: all 0.3s;
+}
+
+.nav a:before
+{
+    content: '(';
+    left: 0px;
+    transform: translateX(10px);
+}
+
+.nav a:after
+{
+    content: ')';
+    right: 0px;
+    transform: translateX(-10px);
+}
+
+.nav a:hover:before, .nav a:hover:after
+{
+    opacity: 1;
+    transform: translateX(0px);
+}
+
+
+.nav a:active {
+    color: #AEB6BE;
+}
+
+/*---------------End nav bar-------------------*/
+
+/*---------------CATERPILLAR TYPEWRITER---------*/
+/* typewriter animation source: https://css-tricks.com/snippets/css/typewriter-effect/ */
+
+.introduction{
+    padding-left:2%;
+    padding-top: 20%;
+    font-size: 300%;
+}
+
+.line-1{
+    position: relative;
+    top: 50%;
+    width: 2.25em;
+    margin: 0 auto;
+    border-right: 2px solid rgba(255,255,255,0);
+    font-size: 350%;
+    white-space: nowrap;
+    overflow: hidden;
+    transform: translateY(-50%);
+}
+
+/* Typewriting Animation */
+
+@keyframes typewriter{
+    from{width: 0;}
+    to{width: 2.25em;}
+}
+@keyframes blinkTextCursor{
+    from{border-right-color: rgba(255,255,255,0.75);}
+    to{border-right-color:rgba(255,255,255,0) ;}
+}
+
+.anim-typewriter{
+    animation: typewriter 1s steps(4) 1s  normal both,
+    blinkTextCursor 500ms steps(4) 5 normal;
+}
+
+/* Giggly letters animation */
+
+.letter{
+    cursor: pointer;
+}
+
+.letter:hover{
+    display: inline-block;
+    transition: 0.25s;
+    transform: translate(0px, -10px);
+}
+
+/*------------------End cat typewriter-----------*/
